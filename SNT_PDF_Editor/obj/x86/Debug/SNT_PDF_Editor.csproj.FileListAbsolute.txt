@@ -1,0 +1,11 @@
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\bin\Debug\SNT_PDF_Editor.exe
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\bin\Debug\SNT_PDF_Editor.pdb
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\bin\Debug\PdfSharp.dll
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\bin\Debug\PdfSharp.pdb
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\bin\Debug\PdfSharp.xml
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\bin\Debug\de\PdfSharp.resources.dll
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.Properties.Resources.resources
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.csproj.GenerateResource.Cache
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.exe
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.pdb
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.PDF_Combine_Form.resources
