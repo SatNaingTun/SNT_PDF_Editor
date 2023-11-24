@@ -9,3 +9,4 @@ E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.csproj.
 E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.exe
 E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.pdb
 E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.PDF_Combine_Form.resources
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.csprojResolveAssemblyReference.cache

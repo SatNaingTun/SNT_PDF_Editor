@@ -27,14 +27,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0403967634D9723AC0F617E048CBC4E3"
+        "MsmKey" = "8:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0403967634D9723AC0F617E048CBC4E3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -55,6 +61,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -71,6 +98,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -131,6 +179,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
+            {
+            "SourcePath" = "8:..\\..\\icons\\ext_pdf_filetype_icon_176234.ico"
+            "TargetName" = "8:ext_pdf_filetype_icon_176234.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_67674779FAF747858CAD323DF92DDFCB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -188,7 +256,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SNT_PDF_Editor"
         "ProductCode" = "8:{F98484B8-B015-4B36-B16A-11C1C06394D4}"
-        "PackageCode" = "8:{E8AFE024-9B3D-43D2-A011-8E535D561AB9}"
+        "PackageCode" = "8:{340D8410-3833-4046-A60C-47F6A6365181}"
         "UpgradeCode" = "8:{571F0668-B8D8-4741-BEDF-FAD1F092743F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -205,7 +273,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -308,6 +376,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4F4BAF706C284E3AAF0748C145756A2D"
+            {
+            "Name" = "8:SNT PDF Editor"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
+            "Folder" = "8:_67674779FAF747858CAD323DF92DDFCB"
+            "WorkingFolder" = "8:_67674779FAF747858CAD323DF92DDFCB"
+            "Icon" = "8:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_ECED79B9A9534D4AB2DE6B672194E5F4"
+            {
+            "Name" = "8:SNT PDF Editor"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
+            "Folder" = "8:_508EB4FC53FC4D8AACFC9E54997046C8"
+            "WorkingFolder" = "8:_67674779FAF747858CAD323DF92DDFCB"
+            "Icon" = "8:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
