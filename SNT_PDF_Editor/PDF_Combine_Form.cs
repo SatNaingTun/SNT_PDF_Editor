@@ -20,6 +20,14 @@ namespace SNT_PDF_Editor
         {
             InitializeComponent();
         }
+        public PDF_Combine_Form(string[] args)
+        {
+            InitializeComponent();
+            foreach (string item in args)
+            {
+                addFile2Grid(item);
+            }
+        }
 
         private void addFile_Click(object sender, EventArgs e)
         {
@@ -39,7 +47,7 @@ namespace SNT_PDF_Editor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"SNT PDF Editor");
             }
         }
 

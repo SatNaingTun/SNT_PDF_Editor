@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Function\FileAssociate.cs" />
     <Compile Include="PDF_Combine_Form.cs">
       <SubType>Form</SubType>
     </Compile>
