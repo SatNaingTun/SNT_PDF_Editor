@@ -202,12 +202,12 @@
         }
         "FileType"
         {
-            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_EE40231CFF7245599271624368DCE579"
+            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_4A2BA8A399C74F97897E4154157C5A8D"
             {
             "Name" = "8:pdf"
             "Description" = "8:"
             "Extensions" = "8:.pdf"
-            "MIME" = "8:application/pdf"
+            "MIME" = "8:Document/pdf"
             "Icon" = "8:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
             "IconIndex" = "3:0"
                 "Command"
@@ -216,7 +216,14 @@
                 }
                 "Verbs"
                 {
-                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_1C02430A5AC24911905C4E74B383C9BC"
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_2B6A1D331A7B4420B3176E1708E5F32C"
+                    {
+                    "Command" = "8:&Combine"
+                    "Verb" = "8:edit"
+                    "Arguments" = "8:\"%1\" \"%2\" \"%3\" \"%4\"  \"%5\" \"%6\"  \"%7\"  \"%8\"  \"%9\""
+                    "Order" = "3:1"
+                    }
+                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_96139525ADC44AC2B401F0A97E08044C"
                     {
                     "Command" = "8:&Open"
                     "Verb" = "8:open"
@@ -228,6 +235,17 @@
         }
         "Folder"
         {
+            "{1525181F-901A-416C-8A58-119130FE478E}:_0A2A95DF1D8A42CFBDDC7168ED53AC2B"
+            {
+            "Name" = "8:#1920"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:SendToFolder"
+                "Folders"
+                {
+                }
+            }
             "{1525181F-901A-416C-8A58-119130FE478E}:_3784CADFA92B4024AC5742515E217233"
             {
             "Name" = "8:#1916"
@@ -279,7 +297,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SNT_PDF_Editor"
         "ProductCode" = "8:{F98484B8-B015-4B36-B16A-11C1C06394D4}"
-        "PackageCode" = "8:{DFDA5E46-6157-4A89-A429-45F4C3B2DD32}"
+        "PackageCode" = "8:{325B0497-BF1B-4051-9903-91A9294291F5}"
         "UpgradeCode" = "8:{571F0668-B8D8-4741-BEDF-FAD1F092743F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -320,9 +338,9 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_AE3BAB4915844FC6ADE66E58E0B023F1"
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_8448E47C8097410EADDF1C6DC48F33B3"
                             {
-                            "Name" = "8:RegisteredApplication"
+                            "Name" = "8:SNT"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:FALSE"
@@ -332,13 +350,13 @@
                                 }
                                 "Values"
                                 {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_73272AF1EE534742AF76FD1B7948A541"
+                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_A406F9815E124ECCBA519ADE2003F200"
                                     {
-                                    "Name" = "8:SNT_PDF_Editor"
+                                    "Name" = "8:Path"
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
                                     "ValueTypes" = "3:1"
-                                    "Value" = "8:Software\\Classes\\SNT_PDF_Editor.exe"
+                                    "Value" = "8:[ProgramFilesFolder][Manufacturer]"
                                     }
                                 }
                             }
@@ -378,16 +396,38 @@
                                                     "Transitive" = "11:FALSE"
                                                         "Keys"
                                                         {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_A81BB598FEE1440B9A4703B5FB9C817B"
+                                                            {
+                                                            "Name" = "8:command"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_79CDD5377BBE42B384E192CCF8A96DF3"
+                                                                    {
+                                                                    "Name" = "8:"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:\"[TARGETDIR]SNT_POS_Editor.exe\" \"%1\""
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                         "Values"
                                                         {
-                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_0798F54E88854C29A6D2489FE479D77C"
+                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_D724240524DF43E8AF33885B7DEDF739"
                                                             {
-                                                            "Name" = "8:"
+                                                            "Name" = "8:MultiSelectModel"
                                                             "Condition" = "8:"
                                                             "Transitive" = "11:FALSE"
                                                             "ValueTypes" = "3:1"
-                                                            "Value" = "8:\"[TARGETDIR]SNT_POS_Editor.exe\" \"%1\""
+                                                            "Value" = "8:Player"
                                                             }
                                                         }
                                                     }
@@ -399,6 +439,14 @@
                                         }
                                         "Values"
                                         {
+                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_2E3BBA0C1DB04AF7A7BA14E609CD33CB"
+                                            {
+                                            "Name" = "8:"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:SNT PDF Editor"
+                                            }
                                         }
                                     }
                                     "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_7E981F0272A34B6A825D53FF53A4E06B"
@@ -410,6 +458,28 @@
                                     "Transitive" = "11:FALSE"
                                         "Keys"
                                         {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_868EA8ADB14F4C0D8654F372560B0D9D"
+                                            {
+                                            "Name" = "8:OpenWithProgids"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                }
+                                                "Values"
+                                                {
+                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_18CF7B37AFAE4D4987609F95F4EC683B"
+                                                    {
+                                                    "Name" = "8:SNT_PDF_Editor.exe"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:"
+                                                    }
+                                                }
+                                            }
                                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_875FDC6C6DFC4EC69E1912F65DF2E639"
                                             {
                                             "Name" = "8:OpenWithList"
@@ -568,6 +638,22 @@
                                                                 }
                                                                 "Values"
                                                                 {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_037F585E9E4649D09860CF12AB1BFD36"
+                                                                    {
+                                                                    "Name" = "8:Path"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:\"[TARGETDIR]\""
+                                                                    }
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_08914EF1C3E74AC782A77B952DB793DC"
+                                                                    {
+                                                                    "Name" = "8:DontUseDesktopChangeRoute"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:3"
+                                                                    "Value" = "3:1"
+                                                                    }
                                                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_FE55D8EB516542E6920462A8A2182963"
                                                                     {
                                                                     "Name" = "8:"
@@ -624,67 +710,89 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_09423BB4BC964B05967822FB87CDBC16"
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4645AEA9D2B44ACC825A76E48A566B23"
                             {
-                            "Name" = "8:SNT_PDF_Editor.exe"
+                            "Name" = "8:.pdf"
                             "Condition" = "8:"
                             "AlwaysCreate" = "11:FALSE"
                             "DeleteAtUninstall" = "11:FALSE"
                             "Transitive" = "11:FALSE"
                                 "Keys"
                                 {
-                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_105AAD6AA1F24FEDAE3C0425786245C2"
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_BAE70BAAC8984CAAAFB76E93525962BD"
                                     {
-                                    "Name" = "8:SupportedTypes"
+                                    "Name" = "8:SNT_PDF_Editor.exe"
                                     "Condition" = "8:"
                                     "AlwaysCreate" = "11:FALSE"
                                     "DeleteAtUninstall" = "11:FALSE"
                                     "Transitive" = "11:FALSE"
                                         "Keys"
                                         {
-                                        }
-                                        "Values"
-                                        {
-                                        }
-                                    }
-                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_FFAC4B878E324DA781C9AAABAF238C7E"
-                                    {
-                                    "Name" = "8:shell"
-                                    "Condition" = "8:"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "DeleteAtUninstall" = "11:FALSE"
-                                    "Transitive" = "11:FALSE"
-                                        "Keys"
-                                        {
-                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_3A82373AC8A04505ACF18D7FCB86DA63"
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_105AAD6AA1F24FEDAE3C0425786245C2"
                                             {
-                                            "Name" = "8:open"
+                                            "Name" = "8:SupportedTypes"
                                             "Condition" = "8:"
                                             "AlwaysCreate" = "11:FALSE"
                                             "DeleteAtUninstall" = "11:FALSE"
                                             "Transitive" = "11:FALSE"
                                                 "Keys"
                                                 {
-                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_1FEA60DA29C44E7A9C46EE1AAC37BBA4"
+                                                }
+                                                "Values"
+                                                {
+                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_A64C4C12FB0A49978DF89F9A5B4D19F7"
                                                     {
-                                                    "Name" = "8:command"
+                                                    "Name" = "8:.pdf"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:"
+                                                    }
+                                                }
+                                            }
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_FFAC4B878E324DA781C9AAABAF238C7E"
+                                            {
+                                            "Name" = "8:shell"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_3A82373AC8A04505ACF18D7FCB86DA63"
+                                                    {
+                                                    "Name" = "8:open"
                                                     "Condition" = "8:"
                                                     "AlwaysCreate" = "11:FALSE"
                                                     "DeleteAtUninstall" = "11:FALSE"
                                                     "Transitive" = "11:FALSE"
                                                         "Keys"
                                                         {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_1FEA60DA29C44E7A9C46EE1AAC37BBA4"
+                                                            {
+                                                            "Name" = "8:command"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:FALSE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_282E136E1DDF44DDA839D50C952C39ED"
+                                                                    {
+                                                                    "Name" = "8:"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:\"[TARGETDIR]SNT_POS_Editor.exe\" /a \"%1\" \"%2\" \"%3\" \"%4\"  \"%5\" \"%6\"  \"%7\"  \"%8\"  \"%9\""
+                                                                    }
+                                                                }
+                                                            }
                                                         }
                                                         "Values"
                                                         {
-                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_282E136E1DDF44DDA839D50C952C39ED"
-                                                            {
-                                                            "Name" = "8:"
-                                                            "Condition" = "8:"
-                                                            "Transitive" = "11:FALSE"
-                                                            "ValueTypes" = "3:1"
-                                                            "Value" = "8:\"[TARGETDIR]SNT_POS_Editor.exe\" \"%1\" \"%2\" \"%3\" \"%4\"  \"%5\" \"%6\"  \"%7\"  \"%8\"  \"%9\""
-                                                            }
                                                         }
                                                     }
                                                 }
@@ -695,64 +803,14 @@
                                         }
                                         "Values"
                                         {
-                                        }
-                                    }
-                                }
-                                "Values"
-                                {
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_33031376E0144AD1AA896F4BCA5BAA79"
-                                    {
-                                    "Name" = "8:.pdf"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:"
-                                    }
-                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_BA6C5FE88A2F487FB3975C8351C242CF"
-                                    {
-                                    "Name" = "8:"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "ValueTypes" = "3:1"
-                                    "Value" = "8:SNT_PDF_Editor.exe"
-                                    }
-                                }
-                            }
-                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_4645AEA9D2B44ACC825A76E48A566B23"
-                            {
-                            "Name" = "8:.pdf"
-                            "Condition" = "8:"
-                            "AlwaysCreate" = "11:FALSE"
-                            "DeleteAtUninstall" = "11:FALSE"
-                            "Transitive" = "11:FALSE"
-                                "Keys"
-                                {
-                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_E29C86D60345454FABA9CB63ED65C70D"
-                                    {
-                                    "Name" = "8:OpenWithLIst"
-                                    "Condition" = "8:"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "DeleteAtUninstall" = "11:FALSE"
-                                    "Transitive" = "11:FALSE"
-                                        "Keys"
-                                        {
-                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_50C995674B3E49B5AD17D25C2BC3B724"
+                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_BA6C5FE88A2F487FB3975C8351C242CF"
                                             {
-                                            "Name" = "8:SNT_PDF_Editor.exe"
+                                            "Name" = "8:"
                                             "Condition" = "8:"
-                                            "AlwaysCreate" = "11:FALSE"
-                                            "DeleteAtUninstall" = "11:FALSE"
                                             "Transitive" = "11:FALSE"
-                                                "Keys"
-                                                {
-                                                }
-                                                "Values"
-                                                {
-                                                }
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:SNT_PDF_Editor.exe"
                                             }
-                                        }
-                                        "Values"
-                                        {
                                         }
                                     }
                                     "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_EA467218AA6C4BF594D4865443BE204C"
@@ -798,6 +856,14 @@
                                                 }
                                                 "Values"
                                                 {
+                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_01E9491816A84219A427A1F90B5CA3CF"
+                                                    {
+                                                    "Name" = "8:MultiSelectModel"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:Document"
+                                                    }
                                                     "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_26C8FE80CE2C4BC6B243821CAC6F87D5"
                                                     {
                                                     "Name" = "8:Icon"
@@ -816,42 +882,6 @@
                                                     }
                                                 }
                                             }
-                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_AF96E7F6D32C423991156F01800D626C"
-                                            {
-                                            "Name" = "8:open"
-                                            "Condition" = "8:"
-                                            "AlwaysCreate" = "11:FALSE"
-                                            "DeleteAtUninstall" = "11:FALSE"
-                                            "Transitive" = "11:FALSE"
-                                                "Keys"
-                                                {
-                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_8816AEBC25C847D9BD3E95CDBE8998B5"
-                                                    {
-                                                    "Name" = "8:command"
-                                                    "Condition" = "8:"
-                                                    "AlwaysCreate" = "11:FALSE"
-                                                    "DeleteAtUninstall" = "11:FALSE"
-                                                    "Transitive" = "11:FALSE"
-                                                        "Keys"
-                                                        {
-                                                        }
-                                                        "Values"
-                                                        {
-                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_AD58822014BD44C091503B7E595F5163"
-                                                            {
-                                                            "Name" = "8:"
-                                                            "Condition" = "8:"
-                                                            "Transitive" = "11:FALSE"
-                                                            "ValueTypes" = "3:1"
-                                                            "Value" = "8:\"[TARGETDIR]SNT_POS_Editor.exe\" \"%1\" \"%2\" \"%3\" \"%4\"  \"%5\" \"%6\"  \"%7\"  \"%8\"  \"%9\""
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                                "Values"
-                                                {
-                                                }
-                                            }
                                         }
                                         "Values"
                                         {
@@ -868,11 +898,221 @@
                                     "ValueTypes" = "3:1"
                                     "Value" = "8:application/pdf"
                                     }
+                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_B02FC8D186BF430193FDAA2F7EDF0C14"
+                                    {
+                                    "Name" = "8:"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "ValueTypes" = "3:1"
+                                    "Value" = "8:SNT_PDF_Editor.exe"
+                                    }
                                 }
                             }
                         }
                         "Values"
                         {
+                        }
+                    }
+                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_5E62E7732CE246CA89FA109BC32E6C6B"
+                    {
+                    "Name" = "8:SNT_PDF_Editor.exe"
+                    "Condition" = "8:"
+                    "AlwaysCreate" = "11:FALSE"
+                    "DeleteAtUninstall" = "11:FALSE"
+                    "Transitive" = "11:FALSE"
+                        "Keys"
+                        {
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_0CF311E417EE4EF1AB87A00BA8670F6B"
+                            {
+                            "Name" = "8:shell"
+                            "Condition" = "8:"
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                                "Keys"
+                                {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_E0FF1805A97B4DB5BB0DD1A3F622A2B0"
+                                    {
+                                    "Name" = "8:open"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_93252F1D1E3846D296D498953ECF9A92"
+                                            {
+                                            "Name" = "8:command"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                }
+                                                "Values"
+                                                {
+                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_4465960EE7704236BEED73F0C8941883"
+                                                    {
+                                                    "Name" = "8:"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "ValueTypes" = "3:1"
+                                                    "Value" = "8:\"[TARGETDIR]SNT_POS_Editor.exe\" \"%1\" "
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_7BEE12CFA7394159AADFFAB32872D734"
+                    {
+                    "Name" = "8:Applications"
+                    "Condition" = "8:"
+                    "AlwaysCreate" = "11:FALSE"
+                    "DeleteAtUninstall" = "11:FALSE"
+                    "Transitive" = "11:FALSE"
+                        "Keys"
+                        {
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_8E8E3E6DFE04463F8008813D8945BB8C"
+                            {
+                            "Name" = "8:SNT_PDF_Editor.exe"
+                            "Condition" = "8:"
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                                "Keys"
+                                {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_09C27C470282445B8F85EC0C0A21C505"
+                                    {
+                                    "Name" = "8:shell"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F4785FDE82504E5F98E90D701A0938E8"
+                                            {
+                                            "Name" = "8:open"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_F8EBB67EC7A842CA84660CCCBE2A0BF2"
+                                                    {
+                                                    "Name" = "8:command"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                        }
+                                                        "Values"
+                                                        {
+                                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_9E0FC231F9104B3DBDEAE1DEF0B52B65"
+                                                            {
+                                                            "Name" = "8:"
+                                                            "Condition" = "8:"
+                                                            "Transitive" = "11:FALSE"
+                                                            "ValueTypes" = "3:1"
+                                                            "Value" = "8:\"[TARGETDIR]SNT_POS_Editor.exe\" \"%1\" "
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_C25593C12B144898866B54B788F4AAEE"
+                                    {
+                                    "Name" = "8:SupportedTypes"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                        }
+                                        "Values"
+                                        {
+                                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_93803E37B8804C768928FF319F1D0175"
+                                            {
+                                            "Name" = "8:.pdf"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "ValueTypes" = "3:1"
+                                            "Value" = "8:"
+                                            }
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
+                        }
+                        "Values"
+                        {
+                        }
+                    }
+                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_7C236E09E16D48588DD9B57D4E7BF928"
+                    {
+                    "Name" = "8:.pdf"
+                    "Condition" = "8:"
+                    "AlwaysCreate" = "11:FALSE"
+                    "DeleteAtUninstall" = "11:FALSE"
+                    "Transitive" = "11:FALSE"
+                        "Keys"
+                        {
+                        }
+                        "Values"
+                        {
+                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_4C2695C1495D4A7A88C41DA2D2623A79"
+                            {
+                            "Name" = "8:"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "ValueTypes" = "3:1"
+                            "Value" = "8:SNT_PDF_Editor.exe"
+                            }
+                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_8EAC40DAEF9847A881DDE18580CF7769"
+                            {
+                            "Name" = "8:Content Type"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "ValueTypes" = "3:1"
+                            "Value" = "8:Document/pdf"
+                            }
+                            "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_DF1EFB99FE2B4D78AA84712230AA9579"
+                            {
+                            "Name" = "8:PerceivedType"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "ValueTypes" = "3:1"
+                            "Value" = "8:Document"
+                            }
                         }
                     }
                 }

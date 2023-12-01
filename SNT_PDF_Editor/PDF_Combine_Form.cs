@@ -38,16 +38,38 @@ namespace SNT_PDF_Editor
                 addFile2Grid(fileDialog.FileName);
             }
         }
-        private void addFile2Grid(string fileName)
+        public void addFile2Grid(string fileName)
         {
+           // MessageBox.Show(fileName);
             try
             {
-                FileInfo fileInfo = new FileInfo(fileName);
-                dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName);
+                if (Directory.Exists(fileName)||File.Exists(fileName))
+                {
+                    FileInfo fileInfo = new FileInfo(fileName);
+                    if (fileInfo.Extension == ".pdf")
+                    {
+                        if (dataGridView1.InvokeRequired)
+                            dataGridView1.Invoke(new Action(() =>
+                            dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName)));
+                        else
+                            dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName);
+
+                        dataGridView1.Invalidate();
+                    }
+
+                  
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message,"SNT PDF Editor");
+            }
+        }
+        public void addFiles2Grid(string[] files)
+        {
+            foreach (var item in files)
+            {
+                addFile2Grid((string)item);
             }
         }
 
@@ -144,6 +166,11 @@ namespace SNT_PDF_Editor
                 dataGridView1.CurrentCell = myRow.Cells[0];
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
         }
     }
 }
