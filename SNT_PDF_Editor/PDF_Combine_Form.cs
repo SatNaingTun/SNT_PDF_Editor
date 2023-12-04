@@ -46,16 +46,25 @@ namespace SNT_PDF_Editor
                 if (Directory.Exists(fileName)||File.Exists(fileName))
                 {
                     FileInfo fileInfo = new FileInfo(fileName);
+                    
                     if (fileInfo.Extension == ".pdf")
                     {
+                        dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName);
+
                         if (dataGridView1.InvokeRequired)
                             dataGridView1.Invoke(new Action(() =>
-                            dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName)));
-                        else
-                            dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName);
+                            {
+                                dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName);
 
-                        dataGridView1.Invalidate();
+                            }));
                     }
+                    if (dataGridView1.InvokeRequired)
+                        dataGridView1.Invoke(new Action(() =>
+                        {
+                            dataGridView1.Refresh(); 
+
+                        }));
+                   
 
                   
                 }
@@ -170,7 +179,12 @@ namespace SNT_PDF_Editor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Refresh();
+            if (dataGridView1.InvokeRequired)
+                dataGridView1.Invoke(new Action(() =>
+                {
+                    dataGridView1.Refresh();
+
+                }));
         }
     }
 }
