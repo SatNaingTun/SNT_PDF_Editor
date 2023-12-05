@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Reflection;
 using SNT_PDF_Editor.Function;
+using System.IO;
 
 namespace SNT_PDF_Editor
 {
@@ -78,13 +79,34 @@ namespace SNT_PDF_Editor
                 else if (args[0] == "-combine")
                 {
                     PDFcombiner combiner = new PDFcombiner();
+                    string output=null;
                     for (int i = 1; i < args.Length; i++)
                     {
-                        Console.WriteLine("adding" + args[i]);
+                        if (args[i] == "-output")
+                        {
+                            output = args[i + 1];
+                            break;
+                        }
+                        else
+                        
                         combiner.addDocument(args[i]);
+                        
                     }
-                    combiner.save(System.IO.Path.GetDirectoryName(args[1])+"\\"+"SNT_PDF_CombineOutput.pdf");
+
+                    if (output == null)
+                    {
+                        combiner.save(Path.GetDirectoryName(args[1]) + "\\" + "SNT_PDF_CombineOutput.pdf");
+                    }
+                    else if (Directory.Exists(output))
+                    {
+                        combiner.save(output);
+                    }
+                    else
+                    {
+                        combiner.save(Path.GetDirectoryName(args[1]) + "\\" + output);
+                    }
                     //combiner.save("SNT_PDF_CombineOutput.pdf");
+                    
                 }
                
                 else if (args[0] == "-split-form")
