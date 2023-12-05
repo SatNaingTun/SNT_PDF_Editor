@@ -8,13 +8,25 @@ using System.IO;
 
 namespace SNT_PDF_Editor.Function
 {
-  public class PDFspliter
+  public class PDFspliter:IPDFFunction
     {
         PdfDocument inputDocument;
 
         public void openDocument(string fileName)
         {
-            inputDocument = PdfReader.Open(fileName, PdfDocumentOpenMode.Import);
+            if (File.Exists(fileName))
+            {
+                inputDocument = PdfReader.Open(fileName, PdfDocumentOpenMode.Import);
+                for (int i = 0; i < inputDocument.PageCount; i++)
+                {
+                    PdfPage page = inputDocument.Pages[i];
+                    inputDocument.AddPage(page);
+                }
+            }
+            else
+            {
+                Console.WriteLine(fileName + "File Not Exist");
+            }
         }
         public void save(string fileName)
         {

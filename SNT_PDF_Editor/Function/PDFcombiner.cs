@@ -8,12 +8,12 @@ using System.IO;
 
 namespace SNT_PDF_Editor.Function
 {
-    public class PDFcombiner
+    public class PDFcombiner:IPDFFunction
     {
         PdfDocument inputDocument;
         PdfDocument outputDocument=new PdfDocument();
        
-       public void addDocument(string fileName)
+       public void openDocument(string fileName)
         {
             if (File.Exists(fileName))
             {

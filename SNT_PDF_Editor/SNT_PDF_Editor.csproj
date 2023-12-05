@@ -53,7 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Function\FileAssociate.cs" />
+    <Compile Include="Function\IPDFFunction.cs" />
     <Compile Include="Function\PDFspliter.cs" />
+    <Compile Include="Function\ProgramInjection.cs" />
     <Compile Include="PDF_Combine_Form.cs">
       <SubType>Form</SubType>
     </Compile>

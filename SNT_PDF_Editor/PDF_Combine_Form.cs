@@ -130,7 +130,7 @@ namespace SNT_PDF_Editor
            foreach (DataGridViewRow row in  dataGridView1.Rows)
            {
                string filePath = (string)row.Cells["FilePath"].Value;
-              combiner.addDocument(filePath);
+              combiner.openDocument(filePath);
            }
            SaveFileDialog saveFileDialog = new SaveFileDialog();
            saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
