@@ -26,7 +26,7 @@ namespace SNT_PDF_Editor
 
                 if (args.Length == 0)
                 {
-                    Application.Run(new PDF_Combine_Form());
+                    Application.Run(new PDF_Change_Form());
                     //MessageBox.Show(new SNT_PDF_Editor.Function.FileAssociate().getMyName());
                 }
                 else if (args[0] == "-split")
@@ -53,7 +53,7 @@ namespace SNT_PDF_Editor
 
                 else if (args[0] == "-combine-form")
                 {
-                    Application.Run(new PDF_Combine_Form(getFiles(args)));
+                    Application.Run(new PDF_Change_Form(getFiles(args)));
                 }
             }
             catch (Exception ex)

@@ -12,15 +12,15 @@ using SNT_PDF_Editor.Function;
 
 namespace SNT_PDF_Editor
 {
-    public partial class PDF_Combine_Form : Form
+    public partial class PDF_Change_Form : Form
     {
         private int rowIndex = 0;
 
-        public PDF_Combine_Form()
+        public PDF_Change_Form()
         {
             InitializeComponent();
         }
-        public PDF_Combine_Form(string[] args)
+        public PDF_Change_Form(string[] args)
         {
             InitializeComponent();
             foreach (string item in args)
@@ -177,14 +177,26 @@ namespace SNT_PDF_Editor
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.InvokeRequired)
-                dataGridView1.Invoke(new Action(() =>
-                {
-                    dataGridView1.Refresh();
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    if (dataGridView1.InvokeRequired)
+        //        dataGridView1.Invoke(new Action(() =>
+        //        {
+        //            dataGridView1.Refresh();
 
-                }));
+        //        }));
+        //}
+
+        private void btnSplit_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                PDFspliter spliter = new PDFspliter();
+                string filePath = (string)row.Cells["FilePath"].Value;
+                //string fileName = (string)row.Cells["FileName"].Value;
+                spliter.openDocument(filePath);
+                spliter.save(filePath);
+            }
         }
     }
 }

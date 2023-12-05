@@ -56,11 +56,11 @@
     <Compile Include="Function\IPDFFunction.cs" />
     <Compile Include="Function\PDFspliter.cs" />
     <Compile Include="Function\ProgramInjection.cs" />
-    <Compile Include="PDF_Combine_Form.cs">
+    <Compile Include="PDF_Change_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PDF_Combine_Form.Designer.cs">
-      <DependentUpon>PDF_Combine_Form.cs</DependentUpon>
+    <Compile Include="PDF_Change_Form.Designer.cs">
+      <DependentUpon>PDF_Change_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Function\PDFcombiner.cs" />
     <Compile Include="PDF_Split_Form.cs">
@@ -71,8 +71,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PDF_Combine_Form.resx">
-      <DependentUpon>PDF_Combine_Form.cs</DependentUpon>
+    <EmbeddedResource Include="PDF_Change_Form.resx">
+      <DependentUpon>PDF_Change_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PDF_Split_Form.resx">
       <DependentUpon>PDF_Split_Form.cs</DependentUpon>

@@ -155,6 +155,11 @@
             "AssemblyAsmDisplayName" = "8:PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
+                    "_0403967634D9723AC0F617E048CBC4E3"
+                    {
+                    "Name" = "8:PdfSharp.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:PdfSharp.dll"
             "TargetName" = "8:"
@@ -302,15 +307,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SNT_PDF_Editor"
-        "ProductCode" = "8:{F98484B8-B015-4B36-B16A-11C1C06394D4}"
-        "PackageCode" = "8:{FC8CAD5E-8424-47B2-8F97-42F553E86DA0}"
+        "ProductCode" = "8:{08E3FEAA-04CD-4BA0-B9D4-7DDF5BE508BA}"
+        "PackageCode" = "8:{CF313907-B7B4-4715-B318-B77FE33F0D95}"
         "UpgradeCode" = "8:{571F0668-B8D8-4741-BEDF-FAD1F092743F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:SNT"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

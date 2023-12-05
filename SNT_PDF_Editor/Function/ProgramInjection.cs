@@ -36,7 +36,7 @@ namespace SNT_PDF_Editor.Function
 
                                 Type t = a.GetType("SNT_PDF_Editor.PDF_Combine_Form");
                                 MethodInfo myMethod = t.GetMethod("addFile2Grid");
-                                var initiatedObject = (PDF_Combine_Form)Activator.CreateInstance(t);
+                                var initiatedObject = (PDF_Change_Form)Activator.CreateInstance(t);
                                 //if(args!=null)
                                 // myMethod.Invoke(initiatedObject,toObjectArray( args));
 

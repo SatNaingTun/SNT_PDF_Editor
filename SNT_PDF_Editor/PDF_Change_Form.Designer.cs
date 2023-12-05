@@ -1,6 +1,6 @@
 ﻿namespace SNT_PDF_Editor
 {
-    partial class PDF_Combine_Form
+    partial class PDF_Change_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDF_Combine_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDF_Change_Form));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSplit = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnCombine = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSplit);
             this.panel1.Controls.Add(this.btnDown);
             this.panel1.Controls.Add(this.btnUp);
             this.panel1.Controls.Add(this.btnCombine);
@@ -59,6 +61,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // btnSplit
+            // 
+            this.btnSplit.Location = new System.Drawing.Point(478, 12);
+            this.btnSplit.Name = "btnSplit";
+            this.btnSplit.Size = new System.Drawing.Size(75, 23);
+            this.btnSplit.TabIndex = 3;
+            this.btnSplit.Text = "Split";
+            this.btnSplit.UseVisualStyleBackColor = true;
+            this.btnSplit.Click += new System.EventHandler(this.btnSplit_Click);
             // 
             // btnDown
             // 
@@ -82,7 +94,7 @@
             // 
             // btnCombine
             // 
-            this.btnCombine.Location = new System.Drawing.Point(466, 12);
+            this.btnCombine.Location = new System.Drawing.Point(362, 12);
             this.btnCombine.Name = "btnCombine";
             this.btnCombine.Size = new System.Drawing.Size(75, 23);
             this.btnCombine.TabIndex = 1;
@@ -160,7 +172,7 @@
             this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             // 
-            // PDF_Combine_Form
+            // PDF_Change_Form
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,8 +181,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PDF_Combine_Form";
-            this.Text = "SNT_PDF_Combine";
+            this.Name = "PDF_Change_Form";
+            this.Text = "SNT Change PDF";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -193,6 +205,7 @@
         private System.Windows.Forms.Button btnCombine;
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Button btnSplit;
       
     }
 }

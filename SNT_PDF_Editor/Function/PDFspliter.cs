@@ -11,6 +11,7 @@ namespace SNT_PDF_Editor.Function
   public class PDFspliter:IPDFFunction
     {
         PdfDocument inputDocument;
+        PdfDocument outputDocument = new PdfDocument();
 
         public void openDocument(string fileName)
         {
@@ -20,7 +21,7 @@ namespace SNT_PDF_Editor.Function
                 for (int i = 0; i < inputDocument.PageCount; i++)
                 {
                     PdfPage page = inputDocument.Pages[i];
-                    inputDocument.AddPage(page);
+                    outputDocument.AddPage(page);
                 }
             }
             else
