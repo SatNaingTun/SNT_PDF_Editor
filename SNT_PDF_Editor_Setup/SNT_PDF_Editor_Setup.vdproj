@@ -388,7 +388,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4F4BAF706C284E3AAF0748C145756A2D"
             {
-            "Name" = "8:SNT PDF Combine"
+            "Name" = "8:SNT PDF Changer"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -416,7 +416,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_ECED79B9A9534D4AB2DE6B672194E5F4"
             {
-            "Name" = "8:SNT PDF Combine"
+            "Name" = "8:SNT PDF Changer"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
