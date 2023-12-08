@@ -198,5 +198,10 @@ namespace SNT_PDF_Editor
                 spliter.save(filePath);
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+        }
     }
 }

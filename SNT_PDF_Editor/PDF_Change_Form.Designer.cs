@@ -43,6 +43,7 @@
             this.FilePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -51,6 +52,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnSplit);
             this.panel1.Controls.Add(this.btnDown);
             this.panel1.Controls.Add(this.btnUp);
@@ -64,7 +66,7 @@
             // 
             // btnSplit
             // 
-            this.btnSplit.Location = new System.Drawing.Point(478, 12);
+            this.btnSplit.Location = new System.Drawing.Point(592, 12);
             this.btnSplit.Name = "btnSplit";
             this.btnSplit.Size = new System.Drawing.Size(75, 23);
             this.btnSplit.TabIndex = 3;
@@ -74,7 +76,7 @@
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(217, 11);
+            this.btnDown.Location = new System.Drawing.Point(331, 11);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(75, 23);
             this.btnDown.TabIndex = 2;
@@ -84,7 +86,7 @@
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(121, 11);
+            this.btnUp.Location = new System.Drawing.Point(235, 11);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(75, 23);
             this.btnUp.TabIndex = 2;
@@ -94,7 +96,7 @@
             // 
             // btnCombine
             // 
-            this.btnCombine.Location = new System.Drawing.Point(362, 12);
+            this.btnCombine.Location = new System.Drawing.Point(476, 12);
             this.btnCombine.Name = "btnCombine";
             this.btnCombine.Size = new System.Drawing.Size(75, 23);
             this.btnCombine.TabIndex = 1;
@@ -172,6 +174,16 @@
             this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(102, 12);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // PDF_Change_Form
             // 
             this.AllowDrop = true;
@@ -206,6 +218,7 @@
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnSplit;
+        private System.Windows.Forms.Button btnReset;
       
     }
 }
