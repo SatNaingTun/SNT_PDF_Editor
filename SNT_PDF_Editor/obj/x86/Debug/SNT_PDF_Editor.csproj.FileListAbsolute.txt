@@ -8,3 +8,4 @@ E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.pdb
 E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.csprojResolveAssemblyReference.cache
 E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.PDF_Split_Form.resources
 E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.PDF_Change_Form.resources
+E:\vsprojects\SNT_PDF_Editor\SNT_PDF_Editor\obj\x86\Debug\SNT_PDF_Editor.ProtectDocument.resources

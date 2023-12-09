@@ -49,12 +49,12 @@ namespace SNT_PDF_Editor
                     
                     if (fileInfo.Extension == ".pdf")
                     {
-                        dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName);
+                        dataGridView1.Rows.Add(fileInfo.Name,BytesToString( fileInfo.Length), fileName);
 
                         if (dataGridView1.InvokeRequired)
                             dataGridView1.Invoke(new Action(() =>
                             {
-                                dataGridView1.Rows.Add(fileInfo.Name, fileInfo.Length, fileName);
+                                dataGridView1.Rows.Add(fileInfo.Name,fileInfo.Length, fileName);
 
                             }));
                     }
@@ -130,7 +130,16 @@ namespace SNT_PDF_Editor
            foreach (DataGridViewRow row in  dataGridView1.Rows)
            {
                string filePath = (string)row.Cells["FilePath"].Value;
-              combiner.openDocument(filePath);
+
+
+               if (string.IsNullOrEmpty((string)row.Cells["FilePath"].Value))
+               {
+                   combiner.openDocument(filePath);
+               }
+               else
+               {
+                   combiner.openDocument(filePath, (string)row.Cells["password"].Value);
+               }
            }
            SaveFileDialog saveFileDialog = new SaveFileDialog();
            saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
@@ -194,7 +203,14 @@ namespace SNT_PDF_Editor
                 PDFspliter spliter = new PDFspliter();
                 string filePath = (string)row.Cells["FilePath"].Value;
                 //string fileName = (string)row.Cells["FileName"].Value;
-                spliter.openDocument(filePath);
+                if (string.IsNullOrEmpty((string)row.Cells["FilePath"].Value))
+                {
+                    spliter.openDocument(filePath);
+                }
+                else
+                {
+                    spliter.openDocument(filePath, (string)row.Cells["password"].Value);
+                }
                 spliter.save(filePath);
             }
         }
@@ -202,6 +218,26 @@ namespace SNT_PDF_Editor
         private void btnReset_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+        }
+
+        private void btnFolder_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fd = new FolderBrowserDialog();
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                addFiles2Grid(Directory.GetFiles(fd.SelectedPath));
+            }
+        }
+
+        private String BytesToString(long byteCount)
+        {
+            string[] suf = { "B", "KB", "MB", "GB", "TB", "PB", "EB" }; //Longs run out around EB
+            if (byteCount == 0)
+                return "0" + suf[0];
+            long bytes = Math.Abs(byteCount);
+            int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
+            double num = Math.Round(bytes / Math.Pow(1024, place), 1);
+            return (Math.Sign(byteCount) * num).ToString() + suf[place];
         }
     }
 }

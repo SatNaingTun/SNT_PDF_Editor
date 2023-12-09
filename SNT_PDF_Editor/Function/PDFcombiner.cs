@@ -30,9 +30,32 @@ namespace SNT_PDF_Editor.Function
             }
             
         }
+       public void openDocument(string fileName,string password)
+       {
+           if (File.Exists(fileName))
+           {
+               inputDocument = PdfReader.Open(fileName,password, PdfDocumentOpenMode.Import);
+               for (int i = 0; i < inputDocument.PageCount; i++)
+               {
+                   PdfPage page = inputDocument.Pages[i];
+                   outputDocument.AddPage(page);
+               }
+           }
+           else
+           {
+               Console.WriteLine(fileName + "File Not Exist");
+           }
+
+       }
+       public  PdfDocument getOutput()
+       {
+           return outputDocument;
+       }
        public void save(string fileName)
        {
-           outputDocument.Save(fileName);
+          
+               outputDocument.Save(fileName);
+          
        }
     }
 }
