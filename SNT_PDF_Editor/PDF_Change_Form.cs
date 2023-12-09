@@ -145,6 +145,20 @@ namespace SNT_PDF_Editor
            saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
            {
+               if (chkProtectedOutput.Checked)
+               {
+                   ProtectDocument ptDialog = new ProtectDocument(combiner.getOutput());
+                   if (ptDialog.ShowDialog() == DialogResult.OK)
+                   {
+                       ptDialog.getProtectedDocument().Save(saveFileDialog.FileName);
+                   }
+                   else
+                   {
+                       combiner.save(saveFileDialog.FileName);
+                   }
+
+               }
+               else
                combiner.save(saveFileDialog.FileName);
            }
            
@@ -211,7 +225,10 @@ namespace SNT_PDF_Editor
                 {
                     spliter.openDocument(filePath, (string)row.Cells["password"].Value);
                 }
-                spliter.save(filePath);
+
+               
+                    spliter.save(filePath);
+                //spliter.save(filePath);
             }
         }
 

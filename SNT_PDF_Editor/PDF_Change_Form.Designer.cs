@@ -46,6 +46,7 @@
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chkProtectedOutput = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkProtectedOutput);
             this.panel1.Controls.Add(this.btnFolder);
             this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnSplit);
@@ -203,6 +205,16 @@
             this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             // 
+            // chkProtectedOutput
+            // 
+            this.chkProtectedOutput.AutoSize = true;
+            this.chkProtectedOutput.Location = new System.Drawing.Point(502, 17);
+            this.chkProtectedOutput.Name = "chkProtectedOutput";
+            this.chkProtectedOutput.Size = new System.Drawing.Size(106, 17);
+            this.chkProtectedOutput.TabIndex = 6;
+            this.chkProtectedOutput.Text = "protected Output";
+            this.chkProtectedOutput.UseVisualStyleBackColor = true;
+            // 
             // PDF_Change_Form
             // 
             this.AllowDrop = true;
@@ -215,6 +227,7 @@
             this.Name = "PDF_Change_Form";
             this.Text = "SNT Change PDF";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -240,6 +253,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FileSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.CheckBox chkProtectedOutput;
       
     }
 }

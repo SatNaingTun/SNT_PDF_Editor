@@ -36,6 +36,7 @@ namespace SNT_PDF_Editor
              
             //document.protect(ownerPassword.Text,userPassword.Text,chkModify.Checked,chkPrint.Checked);
             document = PdfSecurity.protectDocument(document, ownerPassword.Text, userPassword.Text, chkModify.Checked, chkPrint.Checked);
+
            this.DialogResult = DialogResult.OK;
         }
     }
