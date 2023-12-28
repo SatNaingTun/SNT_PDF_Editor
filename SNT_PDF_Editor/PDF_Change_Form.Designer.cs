@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDF_Change_Form));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkProtectedOutput = new System.Windows.Forms.CheckBox();
             this.btnFolder = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSplit = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chkProtectedOutput = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +68,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(842, 56);
             this.panel1.TabIndex = 0;
+            // 
+            // chkProtectedOutput
+            // 
+            this.chkProtectedOutput.AutoSize = true;
+            this.chkProtectedOutput.Location = new System.Drawing.Point(502, 17);
+            this.chkProtectedOutput.Name = "chkProtectedOutput";
+            this.chkProtectedOutput.Size = new System.Drawing.Size(106, 17);
+            this.chkProtectedOutput.TabIndex = 6;
+            this.chkProtectedOutput.Text = "protected Output";
+            this.chkProtectedOutput.UseVisualStyleBackColor = true;
             // 
             // btnFolder
             // 
@@ -135,7 +145,7 @@
             this.addFile.Name = "addFile";
             this.addFile.Size = new System.Drawing.Size(75, 23);
             this.addFile.TabIndex = 0;
-            this.addFile.Text = "Add PDF";
+            this.addFile.Text = "Add Files";
             this.addFile.UseVisualStyleBackColor = true;
             this.addFile.Click += new System.EventHandler(this.addFile_Click);
             // 
@@ -168,6 +178,7 @@
             this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
             this.dataGridView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridView1_DragDrop);
             this.dataGridView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.dataGridView1_DragEnter);
+            this.dataGridView1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseMove);
             // 
             // FileName
             // 
@@ -204,16 +215,6 @@
             this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
             this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
-            // 
-            // chkProtectedOutput
-            // 
-            this.chkProtectedOutput.AutoSize = true;
-            this.chkProtectedOutput.Location = new System.Drawing.Point(502, 17);
-            this.chkProtectedOutput.Name = "chkProtectedOutput";
-            this.chkProtectedOutput.Size = new System.Drawing.Size(106, 17);
-            this.chkProtectedOutput.TabIndex = 6;
-            this.chkProtectedOutput.Text = "protected Output";
-            this.chkProtectedOutput.UseVisualStyleBackColor = true;
             // 
             // PDF_Change_Form
             // 

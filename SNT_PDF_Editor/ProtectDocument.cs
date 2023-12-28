@@ -25,14 +25,19 @@ namespace SNT_PDF_Editor
             InitializeComponent();
             this.document = document;
         }
-        public PdfDocument getProtectedDocument()
+        public PdfDocument getDocument()
         {
             return document;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(ownerPassword.Text)) throw new  ArgumentNullException();
+            if (string.IsNullOrEmpty(ownerPassword.Text))
+            {
+                MessageBox.Show("Owner Password cannot be null");
+                this.ownerPassword.Focus();
+                return;
+            }
              
             //document.protect(ownerPassword.Text,userPassword.Text,chkModify.Checked,chkPrint.Checked);
             document = PdfSecurity.protectDocument(document, ownerPassword.Text, userPassword.Text, chkModify.Checked, chkPrint.Checked);

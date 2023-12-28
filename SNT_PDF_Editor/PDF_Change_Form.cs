@@ -32,7 +32,7 @@ namespace SNT_PDF_Editor
         private void addFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
-            fileDialog.Filter = "PDF files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            fileDialog.Filter = "supported files|*.pdf;*.txt;*.jpg;*.jpeg;*.png;*.tiff|All files (*.*)|*.*";
             if (fileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 addFile2Grid(fileDialog.FileName);
@@ -57,6 +57,14 @@ namespace SNT_PDF_Editor
                                 dataGridView1.Rows.Add(fileInfo.Name,fileInfo.Length, fileName);
 
                             }));
+                    }
+                    else if (fileInfo.Extension == ".txt")
+                    {
+                        dataGridView1.Rows.Add(fileInfo.Name, BytesToString(fileInfo.Length), fileName);
+                    }
+                    else if (fileInfo.Extension == ".jpg" || fileInfo.Extension == ".jpeg" || fileInfo.Extension == ".png")
+                    {
+                        dataGridView1.Rows.Add(fileInfo.Name, BytesToString(fileInfo.Length), fileName);
                     }
                     if (dataGridView1.InvokeRequired)
                         dataGridView1.Invoke(new Action(() =>
@@ -84,17 +92,26 @@ namespace SNT_PDF_Editor
 
         private void dataGridView1_DragDrop(object sender, DragEventArgs e)
         {
-             string[] dropFiles = (string[])e.Data.GetData(DataFormats.FileDrop);
-             foreach (string file in dropFiles)
-             {
-                 string ext = Path.GetExtension(file);
-                 if (ext == ".pdf")
-                 {
-                     string fileName = Path.GetFullPath(file);
-                     addFile2Grid(fileName);
-                    
-                 }
-             }
+            if (e.Effect == DragDropEffects.All)
+            {
+                string[] dropFiles = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string file in dropFiles)
+                {
+                    string ext = Path.GetExtension(file);
+                    if (ext == ".pdf")
+                    {
+                        string fileName = Path.GetFullPath(file);
+                        addFile2Grid(fileName);
+
+                    }
+                }
+            }
+            if (e.Effect == DragDropEffects.Move)
+            {
+                DataGridViewRow rowToMove = e.Data.GetData(typeof(DataGridViewRow)) as DataGridViewRow;
+                dataGridView1.Rows.RemoveAt(rowToMove.Index);
+                //dataGridView1.Rows.Insert(e.drop, rw);
+            }
         }
 
         private void contextMenuStrip1_Click(object sender, EventArgs e)
@@ -131,14 +148,23 @@ namespace SNT_PDF_Editor
            {
                string filePath = (string)row.Cells["FilePath"].Value;
 
-
-               if (string.IsNullOrEmpty((string)row.Cells["FilePath"].Value))
+               string ext = Path.GetExtension(filePath);
+               if (ext == ".pdf")
                {
-                   combiner.openDocument(filePath);
+                   if (string.IsNullOrEmpty(filePath))
+                   {
+                       combiner.openDocument(filePath);
+                   }
+                   else
+                   {
+                       combiner.openDocument(filePath, (string)row.Cells["password"].Value);
+                   }
                }
                else
                {
-                   combiner.openDocument(filePath, (string)row.Cells["password"].Value);
+                   PDFConverter pdfConverter = new PDFConverter();
+                   pdfConverter.openDocument(filePath);
+                   combiner.openDocument(pdfConverter.getOutput());
                }
            }
            SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -150,7 +176,7 @@ namespace SNT_PDF_Editor
                    ProtectDocument ptDialog = new ProtectDocument(combiner.getOutput());
                    if (ptDialog.ShowDialog() == DialogResult.OK)
                    {
-                       ptDialog.getProtectedDocument().Save(saveFileDialog.FileName);
+                       ptDialog.getDocument().Save(saveFileDialog.FileName);
                    }
                    else
                    {
@@ -255,6 +281,27 @@ namespace SNT_PDF_Editor
             int place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
             double num = Math.Round(bytes / Math.Pow(1024, place), 1);
             return (Math.Sign(byteCount) * num).ToString() + suf[place];
+        }
+
+        //private void dataGridView1_DragOver(object sender, DragEventArgs e)
+        //{
+        //    if(e.Effect!=DragDropEffects.All&&dataGridView1.SelectedRows!=null)
+        //      e.Effect = DragDropEffects.Move;
+        //}
+
+        private void dataGridView1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int myIndex = dataGridView1.Rows.IndexOf(dataGridView1.CurrentRow);
+                if (myIndex == 0) return;
+
+
+                DataGridViewRow myRow = dataGridView1.CurrentRow;
+                dataGridView1.DoDragDrop(myRow, DragDropEffects.Move);
+
+            }
+            
         }
     }
 }

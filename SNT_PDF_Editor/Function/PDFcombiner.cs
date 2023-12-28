@@ -47,15 +47,29 @@ namespace SNT_PDF_Editor.Function
            }
 
        }
+       public void openDocument(PdfDocument pdf)
+       {
+           if (pdf != null)
+           {
+               MemoryStream stream = new MemoryStream();
+               pdf.Save(stream, false);
+               inputDocument = PdfReader.Open(stream, PdfDocumentOpenMode.Import);
+
+               for (int i = 0; i < inputDocument.PageCount; i++)
+                   {
+                       PdfPage page = inputDocument.Pages[i];
+                       outputDocument.AddPage(page);
+                   }
+              
+           }
+       }
        public  PdfDocument getOutput()
        {
            return outputDocument;
        }
        public void save(string fileName)
-       {
-          
+       {          
                outputDocument.Save(fileName);
-          
        }
     }
 }

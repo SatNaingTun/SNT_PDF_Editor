@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0403967634D9723AC0F617E048CBC4E3"
-        "OwnerKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -33,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E0062FE3B401111792FC979EE0856CE2"
+        "OwnerKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,7 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0403967634D9723AC0F617E048CBC4E3"
+        "OwnerKey" = "8:_E0062FE3B401111792FC979EE0856CE2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -148,32 +148,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0403967634D9723AC0F617E048CBC4E3"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                }
-            "SourcePath" = "8:PdfSharp.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_67674779FAF747858CAD323DF92DDFCB"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
             {
             "SourcePath" = "8:..\\..\\icons\\ext_pdf_filetype_icon_176234.ico"
@@ -192,6 +166,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E0062FE3B401111792FC979EE0856CE2"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E0062FE3B401111792FC979EE0856CE2"
+                    {
+                    "Name" = "8:PdfSharp.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:PdfSharp.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_67674779FAF747858CAD323DF92DDFCB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -302,15 +307,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SNT_PDF_Editor"
-        "ProductCode" = "8:{08E3FEAA-04CD-4BA0-B9D4-7DDF5BE508BA}"
-        "PackageCode" = "8:{CF313907-B7B4-4715-B318-B77FE33F0D95}"
+        "ProductCode" = "8:{D4E888AD-3EC7-4548-8131-52D9A27D03B6}"
+        "PackageCode" = "8:{CF382939-387A-4BBD-91C0-09C03649A947}"
         "UpgradeCode" = "8:{571F0668-B8D8-4741-BEDF-FAD1F092743F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:SNT"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

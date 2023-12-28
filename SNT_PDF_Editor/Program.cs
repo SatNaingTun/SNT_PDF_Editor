@@ -55,6 +55,11 @@ namespace SNT_PDF_Editor
                 {
                     Application.Run(new PDF_Change_Form(getFiles(args)));
                 }
+                else if (args[0] == "-convert")
+                {
+                    IPDFFunction converter = new PDFConverter();
+                    doWork(ref converter, args);
+                }
             }
             catch (Exception ex)
             {

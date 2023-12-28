@@ -16,9 +16,10 @@ namespace SNT_PDF_Editor.Function
             Process currentProcess = Process.GetCurrentProcess();
             if (myProcesses.Length > 1)
             {
-
+                
                 foreach (var process in myProcesses)
                 {
+                    
                     //MessageBox.Show("Process ID is " + process.Id + "Current " + currentProcess.Id);
                     if (process.Id != currentProcess.Id)
                         if (!process.ProcessName.Contains("vshost"))
