@@ -90,29 +90,7 @@ namespace SNT_PDF_Editor
             }
         }
 
-        private void dataGridView1_DragDrop(object sender, DragEventArgs e)
-        {
-            if (e.Effect == DragDropEffects.All)
-            {
-                string[] dropFiles = (string[])e.Data.GetData(DataFormats.FileDrop);
-                foreach (string file in dropFiles)
-                {
-                    string ext = Path.GetExtension(file);
-                    if (ext == ".pdf")
-                    {
-                        string fileName = Path.GetFullPath(file);
-                        addFile2Grid(fileName);
-
-                    }
-                }
-            }
-            if (e.Effect == DragDropEffects.Move)
-            {
-                DataGridViewRow rowToMove = e.Data.GetData(typeof(DataGridViewRow)) as DataGridViewRow;
-                dataGridView1.Rows.RemoveAt(rowToMove.Index);
-                //dataGridView1.Rows.Insert(e.drop, rw);
-            }
-        }
+        
 
         private void contextMenuStrip1_Click(object sender, EventArgs e)
         {
@@ -136,7 +114,7 @@ namespace SNT_PDF_Editor
 
         private void dataGridView1_DragEnter(object sender, DragEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true)
+            if (e.Data.GetDataPresent(DataFormats.FileDrop, false) == true & e.Effect != DragDropEffects.Move)
                 e.Effect = DragDropEffects.All;
         }
 
@@ -283,25 +261,70 @@ namespace SNT_PDF_Editor
             return (Math.Sign(byteCount) * num).ToString() + suf[place];
         }
 
-        //private void dataGridView1_DragOver(object sender, DragEventArgs e)
-        //{
-        //    if(e.Effect!=DragDropEffects.All&&dataGridView1.SelectedRows!=null)
-        //      e.Effect = DragDropEffects.Move;
-        //}
+        private void dataGridView1_DragOver(object sender, DragEventArgs e)
+        {
+           if (e.Effect != DragDropEffects.All )
+                e.Effect = DragDropEffects.Move;
+        }
 
         private void dataGridView1_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
                 int myIndex = dataGridView1.Rows.IndexOf(dataGridView1.CurrentRow);
-                if (myIndex == 0) return;
+                if (myIndex < 0) return;
 
 
                 DataGridViewRow myRow = dataGridView1.CurrentRow;
+                rowIndex = myRow.Index;
                 dataGridView1.DoDragDrop(myRow, DragDropEffects.Move);
+                //dataGridView1.Rows.Remove(myRow);
 
             }
+
             
+        }
+        private void dataGridView1_DragDrop(object sender, DragEventArgs e)
+        {
+            
+            if (e.Effect == DragDropEffects.All)
+            {
+                string[] dropFiles = (string[])e.Data.GetData(DataFormats.FileDrop);
+                foreach (string file in dropFiles)
+                {
+                    string ext = Path.GetExtension(file);
+                    if (ext == ".pdf")
+                    {
+                        string fileName = Path.GetFullPath(file);
+                        addFile2Grid(fileName);
+
+                    }
+                }
+            }
+            if (e.Effect == DragDropEffects.Move)
+            {
+
+                //DataGridViewRow rowToMove = e.Data.GetData(typeof(DataGridViewRow)) as DataGridViewRow;
+                //if (rowToMove != null)
+                //{
+                //    //dataGridView1.Rows.RemoveAt(rowToMove.Index);
+                //    //dataGridView1.Rows.Insert
+                //}
+                ////dataGridView1.Rows.Insert(e.drop, rw);
+                Point clientPoint = dataGridView1.PointToClient(new Point(e.X, e.Y));
+                int dropIndex = dataGridView1.HitTest(clientPoint.X, clientPoint.Y).RowIndex;
+
+                DataGridViewRow rowToMove = e.Data.GetData(typeof(DataGridViewRow)) as DataGridViewRow;
+                if (rowIndex != -1 & dropIndex != -1)
+                {
+                    dataGridView1.Rows.RemoveAt(rowIndex);
+
+                    dataGridView1.Rows.Insert(dropIndex, rowToMove);
+                    dataGridView1.CurrentCell = rowToMove.Cells[0];
+                }
+
+            }
+
         }
     }
 }
