@@ -18,10 +18,22 @@ namespace SNT_PDF_Editor.Function
             if (File.Exists(fileName))
             {
                 inputDocument = PdfReader.Open(fileName, PdfDocumentOpenMode.Import);
+               
+                
                 for (int i = 0; i < inputDocument.PageCount; i++)
                 {
                     PdfPage page = inputDocument.Pages[i];
-                    outputDocument.AddPage(page);
+                   PdfPage outputPage= outputDocument.AddPage(page);
+                   //addFileNameBookMark(fileName, i,ref outputPage);
+                   
+                   if (i == 0)
+                   {
+                       addFileNameBookMark(fileName, outputPage);
+                   }
+                  
+                   
+                 
+                   
                 }
             }
             else
@@ -30,6 +42,14 @@ namespace SNT_PDF_Editor.Function
             }
             
         }
+
+      private PdfOutline addFileNameBookMark(string fileName, PdfPage page)
+       {
+           //PdfOutline bookmark = outputDocument.Outlines.Add(Path.GetFileNameWithoutExtension(fileName), page);
+           PdfOutline bookmark = outputDocument.Outlines.Add(Path.GetFileNameWithoutExtension(fileName), page);
+           return bookmark;
+       }
+      
        public void openDocument(string fileName,string password)
        {
            if (File.Exists(fileName))
@@ -38,7 +58,12 @@ namespace SNT_PDF_Editor.Function
                for (int i = 0; i < inputDocument.PageCount; i++)
                {
                    PdfPage page = inputDocument.Pages[i];
-                   outputDocument.AddPage(page);
+                   PdfPage outputPage = outputDocument.AddPage(page);
+
+                   if (i == 0)
+                   {
+                       addFileNameBookMark(fileName, outputPage);
+                   }
                }
            }
            else
@@ -58,7 +83,7 @@ namespace SNT_PDF_Editor.Function
                for (int i = 0; i < inputDocument.PageCount; i++)
                    {
                        PdfPage page = inputDocument.Pages[i];
-                       outputDocument.AddPage(page);
+                       PdfPage outputPage = outputDocument.AddPage(page);
                    }
               
            }
@@ -68,7 +93,8 @@ namespace SNT_PDF_Editor.Function
            return outputDocument;
        }
        public void save(string fileName)
-       {          
+       {
+           //PDFBookmarks.addPageBookmarks(ref outputDocument);
                outputDocument.Save(fileName);
        }
     }

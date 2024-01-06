@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Function\FileAssociate.cs" />
     <Compile Include="Function\IPdfFunction.cs" />
+    <Compile Include="Function\PdfBookmarks.cs" />
     <Compile Include="Function\PDFConverter.cs" />
     <Compile Include="Function\PdfSecurity.cs" />
     <Compile Include="Function\PdfSpliter.cs" />

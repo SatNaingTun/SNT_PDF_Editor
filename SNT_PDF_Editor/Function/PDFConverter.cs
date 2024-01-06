@@ -24,6 +24,7 @@ namespace SNT_PDF_Editor.Function
                 {
                     readTextFile(fileName);
                 }
+                //outputDocument.Info.Title = Path.GetFileNameWithoutExtension(fileName);
             }
             
             else
@@ -41,6 +42,7 @@ namespace SNT_PDF_Editor.Function
                 page.Height = img.PixelHeight;
                 XGraphics gfx = XGraphics.FromPdfPage(page);
                 gfx.DrawImage(img, 0, 0, page.Width, page.Height);
+               
             }
         }
         private void readTextFile(string fileName)
