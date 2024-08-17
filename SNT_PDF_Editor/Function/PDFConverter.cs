@@ -38,11 +38,20 @@ namespace SNT_PDF_Editor.Function
 
             using (XImage img = XImage.FromFile(fileName))
             {
-                page.Width = img.PixelWidth;
-                page.Height = img.PixelHeight;
+                //page.Width = img.Size.Width;
+                //page.Height = img.Size.Height;
                 XGraphics gfx = XGraphics.FromPdfPage(page);
-                gfx.DrawImage(img, 0, 0, page.Width, page.Height);
-               
+                if (img.Size.Width <= 842)//A4 height
+                    gfx.DrawImage(img, 0, 0); // don't scale
+                else
+                {
+                    double Scale = img.Size.Width / 842.0;
+                    gfx.DrawImage(img, 0, 0, (int)(img.Size.Width / Scale), (int)(img.Size.Height / Scale));//scale to A4
+                }
+                //gfx.DrawImage(img, 0, 0, page.Width, page.Height);
+                //gfx.DrawImage(img, 0, 0);
+
+
             }
         }
         private void readTextFile(string fileName)
@@ -58,20 +67,20 @@ namespace SNT_PDF_Editor.Function
                     while ((ln = file.ReadLine()) != null)
                     {
                         yPoint += 20;
-                        if (yPoint > page.Height)
+                        if (yPoint > page.Height.Point)
                         {
                             page = outputDocument.AddPage();
                              gfx = XGraphics.FromPdfPage(page);
                              yPoint = 0;
                         }
                         
-                            XFont font = new XFont("Times New Roman", 10, XFontStyle.Regular);
+                            XFont font = new XFont("Times New Roman", 10, XFontStyleEx.Regular);
                             gfx.DrawString(ln, font, XBrushes.Black, new XRect(0, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
 
-                            if (gfx.MeasureString(ln, font).Width > page.Width)
+                            if (gfx.MeasureString(ln, font).Width > page.Width.Point)
                             {
                                 yPoint += 20;
-                                string inString = ln.Substring(0,Convert.ToInt16( ln.Length * page.Width / gfx.MeasureString(ln, font).Width)-3);
+                                string inString = ln.Substring(0,Convert.ToInt16( ln.Length * page.Width.Point / gfx.MeasureString(ln, font).Width)-3);
                                 string outString = ln.Remove(0,inString.Length);
                                 gfx.DrawString(outString, font, XBrushes.Black, new XRect(0, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
                             }

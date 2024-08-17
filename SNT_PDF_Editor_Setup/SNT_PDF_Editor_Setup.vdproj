@@ -21,18 +21,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1A2FC8125580039BEDB8F707CD26B76B"
+        "OwnerKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E0062FE3B401111792FC979EE0856CE2"
-        "OwnerKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,7 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E0062FE3B401111792FC979EE0856CE2"
+        "OwnerKey" = "8:_1A2FC8125580039BEDB8F707CD26B76B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -140,7 +140,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                "FrameworkVersion" = "8:v4.0 Client"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=131000"
                 }
@@ -148,34 +148,14 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
-            {
-            "SourcePath" = "8:..\\..\\icons\\ext_pdf_filetype_icon_176234.ico"
-            "TargetName" = "8:pdf.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_67674779FAF747858CAD323DF92DDFCB"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E0062FE3B401111792FC979EE0856CE2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1A2FC8125580039BEDB8F707CD26B76B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E0062FE3B401111792FC979EE0856CE2"
+                    "_1A2FC8125580039BEDB8F707CD26B76B"
                     {
                     "Name" = "8:PdfSharp.dll"
                     "Attributes" = "3:512"
@@ -199,39 +179,29 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
+            {
+            "SourcePath" = "8:..\\..\\icons\\ext_pdf_filetype_icon_176234.ico"
+            "TargetName" = "8:pdf.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_67674779FAF747858CAD323DF92DDFCB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
-            "{5EB83D71-FA18-4901-BE56-DE22E13CC478}:_4A2BA8A399C74F97897E4154157C5A8D"
-            {
-            "Name" = "8:pdf"
-            "Description" = "8:"
-            "Extensions" = "8:.pdf"
-            "MIME" = "8:Document/pdf"
-            "Icon" = "8:_2404A0BE3B9E4AEF8EE62A8F6EC14B35"
-            "IconIndex" = "3:0"
-                "Command"
-                {
-                "Command" = "8:_16D6BFDFDC714BAF99FD0163C4E36D56"
-                }
-                "Verbs"
-                {
-                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_2B6A1D331A7B4420B3176E1708E5F32C"
-                    {
-                    "Command" = "8:&Combine"
-                    "Verb" = "8:edit"
-                    "Arguments" = "8:\"%1\" \"%2\" \"%3\" \"%4\"  \"%5\" \"%6\"  \"%7\"  \"%8\"  \"%9\""
-                    "Order" = "3:1"
-                    }
-                    "{95C0C507-CBF0-42B8-B119-07219E384A4A}:_96139525ADC44AC2B401F0A97E08044C"
-                    {
-                    "Command" = "8:&Open"
-                    "Verb" = "8:open"
-                    "Arguments" = "8:\"%1\""
-                    "Order" = "3:0"
-                    }
-                }
-            }
         }
         "Folder"
         {

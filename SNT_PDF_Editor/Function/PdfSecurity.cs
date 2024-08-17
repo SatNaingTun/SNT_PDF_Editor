@@ -50,7 +50,7 @@ namespace SNT_PDF_Editor.Function
 
            document.SecuritySettings.OwnerPassword = ownerPassword;
 
-           document.SecuritySettings.PermitAccessibilityExtractContent = false;
+           //document.SecuritySettings.PermitAssembleDocument = false;
 
            document.SecuritySettings.PermitAnnotations = false;
 

@@ -293,12 +293,11 @@ namespace SNT_PDF_Editor
                 foreach (string file in dropFiles)
                 {
                     string ext = Path.GetExtension(file);
-                    if (ext == ".pdf")
-                    {
+                    
                         string fileName = Path.GetFullPath(file);
                         addFile2Grid(fileName);
 
-                    }
+                    
                 }
             }
             if (e.Effect == DragDropEffects.Move)
