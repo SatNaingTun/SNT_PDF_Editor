@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SNT_PDF_Editor", "SNT_PDF_Editor\SNT_PDF_Editor.csproj", "{37904D7E-C13E-4B66-A7F9-6E52CE48F672}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SNT_PDF_Editor_Setup", "SNT_PDF_Editor_Setup\SNT_PDF_Editor_Setup.vdproj", "{3E2079CE-0973-4B04-B293-D93D1FE54214}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SNT_PDF_Setup", "SNT_PDF_Setup\SNT_PDF_Setup.vdproj", "{9BD6465B-2646-402A-981A-B40C441E62EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,12 +27,12 @@ Global
 		{37904D7E-C13E-4B66-A7F9-6E52CE48F672}.Release|Mixed Platforms.Build.0 = Release|x86
 		{37904D7E-C13E-4B66-A7F9-6E52CE48F672}.Release|x86.ActiveCfg = Release|x86
 		{37904D7E-C13E-4B66-A7F9-6E52CE48F672}.Release|x86.Build.0 = Release|x86
-		{3E2079CE-0973-4B04-B293-D93D1FE54214}.Debug|Any CPU.ActiveCfg = Debug
-		{3E2079CE-0973-4B04-B293-D93D1FE54214}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{3E2079CE-0973-4B04-B293-D93D1FE54214}.Debug|x86.ActiveCfg = Debug
-		{3E2079CE-0973-4B04-B293-D93D1FE54214}.Release|Any CPU.ActiveCfg = Release
-		{3E2079CE-0973-4B04-B293-D93D1FE54214}.Release|Mixed Platforms.ActiveCfg = Release
-		{3E2079CE-0973-4B04-B293-D93D1FE54214}.Release|x86.ActiveCfg = Release
+		{9BD6465B-2646-402A-981A-B40C441E62EB}.Debug|Any CPU.ActiveCfg = Debug
+		{9BD6465B-2646-402A-981A-B40C441E62EB}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{9BD6465B-2646-402A-981A-B40C441E62EB}.Debug|x86.ActiveCfg = Debug
+		{9BD6465B-2646-402A-981A-B40C441E62EB}.Release|Any CPU.ActiveCfg = Release
+		{9BD6465B-2646-402A-981A-B40C441E62EB}.Release|Mixed Platforms.ActiveCfg = Release
+		{9BD6465B-2646-402A-981A-B40C441E62EB}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\vsproject\\SNT_PDF_Editor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|d:\\vsproject\\snt_pdf_editor\\snt_pdf_editor\\pdf_change_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|solutionrelative:snt_pdf_editor\\pdf_change_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|d:\\vsproject\\snt_pdf_editor\\snt_pdf_editor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|solutionrelative:snt_pdf_editor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|d:\\vsproject\\snt_pdf_editor\\snt_pdf_editor\\pdf_change_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|D:\\vsproject\\SNT_PDF_Editor\\snt_pdf_editor\\pdf_change_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|solutionrelative:snt_pdf_editor\\pdf_change_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|d:\\vsproject\\snt_pdf_editor\\snt_pdf_editor\\function\\pdfconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|solutionrelative:snt_pdf_editor\\function\\pdfconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|d:\\vsproject\\snt_pdf_editor\\snt_pdf_editor\\function\\pdfsecurity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|D:\\vsproject\\SNT_PDF_Editor\\snt_pdf_editor\\function\\pdfsecurity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|solutionrelative:snt_pdf_editor\\function\\pdfsecurity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|D:\\vsproject\\SNT_PDF_Editor\\snt_pdf_editor\\pdf_split_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|solutionrelative:snt_pdf_editor\\pdf_split_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|D:\\vsproject\\SNT_PDF_Editor\\snt_pdf_editor\\function\\pdfconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37904D7E-C13E-4B66-A7F9-6E52CE48F672}|SNT_PDF_Editor\\SNT_PDF_Editor.csproj|solutionrelative:snt_pdf_editor\\function\\pdfconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,32 +31,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PDF_Change_Form.cs",
-              "DocumentMoniker": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\PDF_Change_Form.cs",
-              "RelativeDocumentMoniker": "SNT_PDF_Editor\\PDF_Change_Form.cs",
-              "ToolTip": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\PDF_Change_Form.cs",
-              "RelativeToolTip": "SNT_PDF_Editor\\PDF_Change_Form.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAB8AAAA+AAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\Program.cs",
+              "RelativeDocumentMoniker": "SNT_PDF_Editor\\Program.cs",
+              "ToolTip": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\Program.cs",
+              "RelativeToolTip": "SNT_PDF_Editor\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T04:26:16.633Z",
+              "WhenOpened": "2024-08-17T05:27:21.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PdfSecurity.cs",
               "DocumentMoniker": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\Function\\PdfSecurity.cs",
               "RelativeDocumentMoniker": "SNT_PDF_Editor\\Function\\PdfSecurity.cs",
               "ToolTip": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\Function\\PdfSecurity.cs",
               "RelativeToolTip": "SNT_PDF_Editor\\Function\\PdfSecurity.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAhwDQAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAhwEAAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T04:05:49.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PDFConverter.cs",
               "DocumentMoniker": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\Function\\PDFConverter.cs",
               "RelativeDocumentMoniker": "SNT_PDF_Editor\\Function\\PDFConverter.cs",
@@ -68,8 +64,7 @@
               "RelativeToolTip": "SNT_PDF_Editor\\Function\\PDFConverter.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T04:05:45.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-17T04:05:45.352Z"
             },
             {
               "$type": "Document",
@@ -81,18 +76,6 @@
               "RelativeToolTip": "SNT_PDF_Editor\\PDF_Change_Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T04:05:34.814Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PDF_Split_Form.cs [Design]",
-              "DocumentMoniker": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\PDF_Split_Form.cs",
-              "RelativeDocumentMoniker": "SNT_PDF_Editor\\PDF_Split_Form.cs",
-              "ToolTip": "D:\\vsproject\\SNT_PDF_Editor\\SNT_PDF_Editor\\PDF_Split_Form.cs [Design]",
-              "RelativeToolTip": "SNT_PDF_Editor\\PDF_Split_Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T03:59:46.6Z",
               "EditorCaption": " [Design]"
             }
           ]
