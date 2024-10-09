@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using SNT_PDF_Editor.Function;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
 
 
 namespace SNT_PDF_Editor
@@ -324,6 +326,34 @@ namespace SNT_PDF_Editor
 
             }
 
+        }
+
+        private void btnSplit2Pic_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                PDFspliter spliter = new PDFspliter();
+                string filePath = (string)row.Cells["FilePath"].Value;
+                //string fileName = (string)row.Cells["FileName"].Value;
+                if (string.IsNullOrEmpty((string)row.Cells["FilePath"].Value))
+                {
+                    spliter.openDocument(filePath);
+                }
+                else
+                {
+                    spliter.openDocument(filePath, (string)row.Cells["password"].Value);
+                }
+                var files=spliter.getPages();
+                foreach( var page in files)
+                {
+                    XGraphics xgfx = XGraphics.FromPdfPage(page);
+                    
+
+
+                }
+
+                //spliter.save(filePath);
+            }
         }
     }
 }

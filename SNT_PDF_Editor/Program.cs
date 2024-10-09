@@ -26,6 +26,7 @@ namespace SNT_PDF_Editor
 
                 if (args.Length == 0)
                 {
+                    //Application.Run(new Images2PDF());
                     Application.Run(new PDF_Change_Form());
                     //MessageBox.Show(new SNT_PDF_Editor.Function.FileAssociate().getMyName());
                 }
@@ -59,6 +60,11 @@ namespace SNT_PDF_Editor
                 {
                     IPDFFunction converter = new PDFConverter();
                     doWork(ref converter, args);
+                }
+                else if(args[0] =="-images-form")
+                {
+                    Application.Run(new Images2PDF());
+
                 }
             }
             catch (Exception ex)

@@ -47,6 +47,7 @@
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSplit2Pic = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,6 +59,7 @@
             this.panel1.Controls.Add(this.chkProtectedOutput);
             this.panel1.Controls.Add(this.btnFolder);
             this.panel1.Controls.Add(this.btnReset);
+            this.panel1.Controls.Add(this.btnSplit2Pic);
             this.panel1.Controls.Add(this.btnSplit);
             this.panel1.Controls.Add(this.btnDown);
             this.panel1.Controls.Add(this.btnUp);
@@ -66,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(842, 56);
+            this.panel1.Size = new System.Drawing.Size(911, 56);
             this.panel1.TabIndex = 0;
             // 
             // chkProtectedOutput
@@ -101,7 +103,7 @@
             // 
             // btnSplit
             // 
-            this.btnSplit.Location = new System.Drawing.Point(754, 12);
+            this.btnSplit.Location = new System.Drawing.Point(729, 11);
             this.btnSplit.Name = "btnSplit";
             this.btnSplit.Size = new System.Drawing.Size(75, 23);
             this.btnSplit.TabIndex = 3;
@@ -155,7 +157,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(842, 313);
+            this.panel2.Size = new System.Drawing.Size(911, 313);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -173,7 +175,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(842, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(911, 313);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
             this.dataGridView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridView1_DragDrop);
@@ -217,12 +219,22 @@
             this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             // 
+            // btnSplit2Pic
+            // 
+            this.btnSplit2Pic.Location = new System.Drawing.Point(810, 11);
+            this.btnSplit2Pic.Name = "btnSplit2Pic";
+            this.btnSplit2Pic.Size = new System.Drawing.Size(89, 23);
+            this.btnSplit2Pic.TabIndex = 3;
+            this.btnSplit2Pic.Text = "Split as Picture";
+            this.btnSplit2Pic.UseVisualStyleBackColor = true;
+            this.btnSplit2Pic.Click += new System.EventHandler(this.btnSplit2Pic_Click);
+            // 
             // PDF_Change_Form
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 369);
+            this.ClientSize = new System.Drawing.Size(911, 369);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -256,7 +268,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FilePath;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.CheckBox chkProtectedOutput;
-      
+        private System.Windows.Forms.Button btnSplit2Pic;
     }
 }
 

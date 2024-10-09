@@ -43,10 +43,22 @@ namespace SNT_PDF_Editor.Function
                 XGraphics gfx = XGraphics.FromPdfPage(page);
                 if (img.Size.Width <= 842)//A4 height
                     gfx.DrawImage(img, 0, 0); // don't scale
+                    
                 else
                 {
-                    double Scale = img.Size.Width / 842.0;
-                    gfx.DrawImage(img, 0, 0, (int)(img.Size.Width / Scale), (int)(img.Size.Height / Scale));//scale to A4
+                    //double Scale = img.Size.Width / 842.0;
+                    //gfx.DrawImage(img, 0, 0, (int)(img.Size.Width / Scale), (int)(img.Size.Height / Scale));//scale to A4
+                    if (img.Size.Height >page.Height.Value)
+                    {
+                        XRect box = new XRect(0, 0, page.Width.Value, page.Height.Value);
+                        gfx.DrawImage(img, box);
+                    }
+                    else
+                    {
+                        XRect box = new XRect(0, 0, page.Width.Value, img.Size.Height);
+                        gfx.DrawImage(img, box);
+                    }
+                   
                 }
                 //gfx.DrawImage(img, 0, 0, page.Width, page.Height);
                 //gfx.DrawImage(img, 0, 0);

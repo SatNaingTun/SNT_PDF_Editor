@@ -123,6 +123,12 @@
     <Compile Include="Function\PdfSecurity.cs" />
     <Compile Include="Function\PdfSpliter.cs" />
     <Compile Include="Function\ProgramInjection.cs" />
+    <Compile Include="Images2PDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Images2PDF.Designer.cs">
+      <DependentUpon>Images2PDF.cs</DependentUpon>
+    </Compile>
     <Compile Include="PDF_Change_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="ProtectDocument.Designer.cs">
       <DependentUpon>ProtectDocument.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Images2PDF.resx">
+      <DependentUpon>Images2PDF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PDF_Change_Form.resx">
       <DependentUpon>PDF_Change_Form.cs</DependentUpon>
     </EmbeddedResource>

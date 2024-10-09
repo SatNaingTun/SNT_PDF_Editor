@@ -75,5 +75,14 @@ namespace SNT_PDF_Editor.Function
             else
                yield return null;
         }
+        public IEnumerable<PdfPage> getPages()
+        {
+            if (inputDocument != null)
+                for (int i = 0; i < inputDocument.PageCount; i++)
+                {
+                    yield return inputDocument.Pages[i];
+                }
+            else yield return null;
+        }
     }
 }
