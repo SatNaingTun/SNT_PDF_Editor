@@ -58,7 +58,7 @@ namespace SNT_PDF_Editor.Function
                    outputDocument.AddPage(page);
                     //document.Save(fileInfo.DirectoryName+"\\"+fileInfo.Name + " Page" + i + 1+fileInfo.Extension);
                     outputDocument.Save(Path.GetDirectoryName(fileName) + "\\" + Path.GetFileNameWithoutExtension(fileName) + " Page" + (i+1).ToString() + ".pdf");
-                
+                    
             }
         }
         public IEnumerable<PdfDocument> getOutput()

@@ -5,14 +5,19 @@ using System.Text;
 using System.IO;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
+using System.Drawing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Windows.Forms;
 
 namespace SNT_PDF_Editor.Function
 {
     class PDFConverter:IPDFFunction
     {
-        PdfDocument outputDocument = new PdfDocument();
+        PdfDocument outputDocument;
+
         public void openDocument(string fileName)
         {
+            outputDocument = new PdfDocument();
             if (File.Exists(fileName))
             {
                 string ext = Path.GetExtension(fileName);
@@ -32,7 +37,11 @@ namespace SNT_PDF_Editor.Function
                 Console.WriteLine(fileName + "File Not Exist");
             }
         }
-        private void readPicture(string fileName)
+        public void newDocument()
+        { 
+            outputDocument = new PdfDocument(); 
+        }
+        private void readPicture(string fileName,bool isNewPage=false)
         {
             PdfPage page = outputDocument.AddPage();
 
@@ -66,14 +75,61 @@ namespace SNT_PDF_Editor.Function
 
             }
         }
-        private void readTextFile(string fileName)
+        public void addPictureAndTitle(Image image,ref double yPoint,ref int count,string title="")
+        {
+            PdfPage page;
+            
+            if (outputDocument.Pages.Count == 0)
+            {
+                 page = outputDocument.AddPage();
+            }
+            
+            else
+            {
+                 page = outputDocument.Pages[0];
+                //if (yPoint-40+(page.Height.Point/2) >= page.Height.Point)
+                if(count%2==1 && yPoint>0)
+                {
+                    page = outputDocument.AddPage();
+                    yPoint = 0;
+                }
+            }
+            
+            if (string.IsNullOrEmpty(title) != true)
+            {
+                
+                XGraphics gfx = XGraphics.FromPdfPage(page);
+               
+                XFont font = new XFont("Times New Roman", 12, XFontStyleEx.Bold);
+                gfx.DrawString(title, font, XBrushes.Black, new XRect(0, yPoint, page.Width.Point, page.Height.Point), XStringFormats.TopLeft);
+                gfx.Dispose();
+                yPoint += 20;
+
+            }
+            if (image!=null)
+            { 
+                using (XImage xImage = XImage.FromStream(image.toStream()))
+                {
+                XGraphics gfx = XGraphics.FromPdfPage(page);
+                    //yPoint += 20;
+                    XRect box = new XRect(0, yPoint, page.Width.Value, (page.Height.Value/2)-40);
+                gfx.DrawImage(xImage, box);
+                gfx.Dispose();
+                yPoint = (page.Height.Value / 2);
+
+                }
+            }
+
+        }
+        
+        private void readTextFile(string fileName, double yPoint = 0)
         {
             PdfPage page = outputDocument.AddPage();
            
             using (StreamReader file = new StreamReader(fileName))
             {
                 string ln;
-                double yPoint = 0;
+                
                 XGraphics gfx = XGraphics.FromPdfPage(page);
                 {
                     while ((ln = file.ReadLine()) != null)
@@ -114,6 +170,8 @@ namespace SNT_PDF_Editor.Function
         public void save(string fileName)
         {
             outputDocument.Save(fileName);
+           
+            
         }
     }
 }

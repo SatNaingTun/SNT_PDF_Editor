@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Function\FileAssociate.cs" />
+    <Compile Include="Function\ImageFunctions.cs" />
     <Compile Include="Function\IPdfFunction.cs" />
     <Compile Include="Function\PdfBookmarks.cs" />
     <Compile Include="Function\PDFConverter.cs" />
@@ -189,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="pdf.ico" />
+    <None Include="Resources\PictureIcon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
